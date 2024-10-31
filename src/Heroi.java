@@ -6,48 +6,32 @@ public class Heroi {
 
     private String tipoHeroi;
 
-    private String ataqueHeroi;
-
     public Heroi(String nomeHeroi, String idade, String tipoHeroi, String ataqueHeroi) {
         this.nomeHeroi = nomeHeroi;
         this.idade = idade;
         this.tipoHeroi = tipoHeroi;
-        this.ataqueHeroi = ataqueHeroi;
     }
 
-    public String getNomeHeroi() {
-        return nomeHeroi;
-    }
+    public void atacar() {
+        String ataque;
 
-    public void setNomeHeroi(String nomeHeroi) {
-        this.nomeHeroi = nomeHeroi;
-    }
+        switch (this.tipoHeroi) {
+            case "mago":
+                ataque = "usou magia";
+                break;
+            case "guerreiro":
+                ataque = "usou espada";
+                break;
+                case "monge":
+                    ataque = "usou artes marciais";
+                    break;
+                case "ninja":
+                    ataque = "usou shuriken";
+                    break;
+                default:
+                    ataque = "não possui um ataque definido";
+        }
 
-    public String getIdade() {
-        return idade;
-    }
-
-    public void setIdade(String idade) {
-        this.idade = idade;
-    }
-
-    public String getTipoHeroi() {
-        return tipoHeroi;
-    }
-
-    public void setTipoHeroi(String tipoHeroi) {
-        this.tipoHeroi = tipoHeroi;
-    }
-
-    public String getAtaqueHeroi() {
-        return ataqueHeroi;
-    }
-
-    public void setAtaqueHeroi(String ataqueHeroi) {
-        this.ataqueHeroi = ataqueHeroi;
-    }
-
-    public String Ataque() {
-        return "O Herói " + tipoHeroi + " " + nomeHeroi + " atacou usando " + tipoHeroi;
+        System.out.println("O " + this.tipoHeroi + " atacou usando " + ataque);
     }
 }
