@@ -2,11 +2,11 @@ public class Heroi {
 
     private String nomeHeroi;
 
-    private String idade;
+    private int idade;
 
     private String tipoHeroi;
 
-    public Heroi(String nomeHeroi, String idade, String tipoHeroi, String ataqueHeroi) {
+    public Heroi(String nomeHeroi, int idade, String tipoHeroi, String ataqueHeroi) {
         this.nomeHeroi = nomeHeroi;
         this.idade = idade;
         this.tipoHeroi = tipoHeroi;
@@ -32,6 +32,6 @@ public class Heroi {
                     ataque = "não possui um ataque definido";
         }
 
-        System.out.println("O " + this.tipoHeroi + " atacou usando " + ataque);
+        System.out.println("O " + this.tipoHeroi + " " + this.nomeHeroi + " " + "atacou usando " + ataque);
     }
 }
