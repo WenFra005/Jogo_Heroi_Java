@@ -47,11 +47,7 @@ public class Heroi {
         this.ataqueHeroi = ataqueHeroi;
     }
 
-    @Override
-    public String toString() {
-        return "Heroi [nomeHeroi=" + nomeHeroi + ", idade=" + idade + ", tipoHeroi=" + tipoHeroi + ", ataqueHeroi="
-                + ataqueHeroi + "]";
+    public String Ataque() {
+        return "O Herói " + tipoHeroi + " " + nomeHeroi + " atacou usando " + tipoHeroi;
     }
-
-    
 }
